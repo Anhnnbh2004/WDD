@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Shop</title>
+    <link rel="stylesheet" href="giohang1.css">
+    <link rel="stylesheet" href="giohang2.css">
+    <link rel="stylesheet" href="giohang3.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="cart-total"></p>
+        <button id="clear-cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Buy</button>
+    </div>
+
+    <script>
+        // Lấy giỏ hàng từ Local Storage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Lấy bảng hiển thị sản phẩm
+const tableBody = document.querySelector("#cart-table tbody");
+const cartTotal = document.getElementById("cart-total");
+
+// Hiển thị các sản phẩm trong giỏ hàng
+function renderCart() {
+    tableBody.innerHTML = ""; // Xóa nội dung cũ
+    let totalAmount = 0;
+
+    cart.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.price.toLocaleString("vi-VN")}đ</td>
+            <td>
+                <button class="decrease" data-index="${index}">-</button>
+                ${item.quantity}
+                <button class="increase" data-index="${index}">+</button>
+            </td>
+            <td>${(item.price * item.quantity).toLocaleString("vi-VN")}đ</td>
+            <td>
+                <button class="remove" data-index="${index}">Delete</button>
+            </td>
+        `;
+        tableBody.appendChild(row);
+        totalAmount += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = `Total: ${totalAmount.toLocaleString("vi-VN")}đ`;
+}
+
+// Thêm sự kiện tăng, giảm, và xóa sản phẩm
+tableBody.addEventListener("click", e => {
+    const index = e.target.dataset.index;
+    if (e.target.classList.contains("increase")) {
+        cart[index].quantity++;
+    } else if (e.target.classList.contains("decrease")) {
+        if (cart[index].quantity > 1) cart[index].quantity--;
+    } else if (e.target.classList.contains("remove")) {
+        cart.splice(index, 1); // Xóa sản phẩm
+    }
+    localStorage.setItem("cart", JSON.stringify(cart)); // Cập nhật Local Storage
+    renderCart(); // Cập nhật giao diện
+    });
+
+    // Tạo popup hiển thị danh sách sản phẩm khi mua hàng
+    function showPurchasePopup() {
+    if (cart.length === 0) {
+        alert("Cart is empty! Please add products.");
+        return;
+    }
+
+    const purchaseDetails = cart.map(item => 
+        `${item.name} - ${item.quantity} x ${item.price.toLocaleString("vi-VN")}đ = ${(item.price * item.quantity).toLocaleString("vi-VN")}đ`
+    ).join("\n");
+
+    alert(`Product List::\n\n${purchaseDetails}\n\n ${cartTotal.textContent}`);
+    }
+
+    // Gắn sự kiện cho nút "Mua hàng"
+    document.getElementById("clear-cart").addEventListener("click", showPurchasePopup);
+
+    // Hiển thị giỏ hàng khi trang được tải
+    renderCart();
+
+    </script>
+    <a href="form1.html">Home Page</a>
+</body>
+</html>

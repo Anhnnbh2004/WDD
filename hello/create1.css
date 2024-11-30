@@ -1,0 +1,61 @@
+
+body {
+    text-align: center;
+    background-image: url(backgroudASM.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao của màn hình */
+    margin: 0; /* Loại bỏ margin mặc định */
+}
+.account1{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 35px; 
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/551/599/original/user-icon-vector.jpg');
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+}
+.password{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 35px; 
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064197.png'); 
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+}
+.re-pass{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 35px; 
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064197.png'); 
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+}
+.Register{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+.form2{
+    background: rgb(255, 255, 255);
+    width: 350px;
+    padding: 20px; /* Điều chỉnh padding nếu cần */
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}

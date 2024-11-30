@@ -1,0 +1,87 @@
+body{
+    height: 100vh !important;;
+}
+.logo img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50px;
+    transform: transform 0.3s ease, box-shadow 0,3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 50px rgb(246, 246, 246);
+}
+
+.account{
+    display: none; 
+    position: absolute;
+    background-color: #33333380;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.account li{
+    display: block;
+    margin: 10px;
+}
+
+.account li a{
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    
+}
+
+.account li a:hover{
+    background-color: #ffcc00;
+    color: #33333380;
+    border-radius: 20px;
+    
+}
+
+.nav-combine:hover .account{
+    display: block;
+}
+
+.services{
+    display: none; 
+    position: absolute;
+    background-color: #33333380;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.services li{
+    display: block;
+    margin: 10px;
+}
+
+.services li a{
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    
+}
+
+.services li a:hover{
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 20px;  
+}
+
+.nav-combine:hover .services{
+    display: block;
+}

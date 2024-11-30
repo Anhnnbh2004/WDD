@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Sales Management System</title>
+    <link rel="stylesheet" href="btcn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="form11.css">
+    <link rel="stylesheet" href="form12.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header-container">
+        <div class="top-bar">
+            <a href="#"> <i class="fa-solid fa-location-dot"></i> 60 Nguyên xá</a>
+            <a href="tel:0896527875"> <i class="fa fa-phone" aria-hidden="true"></i> Order: 0896.527.875</a>
+        </div>
+            
+        <div class="nav1">
+            <nav>
+                <ul>
+                    <li class="logo">
+                        <a href="form1.html">
+                            <img src="logo.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-combine"><a href="#">Home</a></li>
+                    <li><a href="contact.html">A Contact</a></li>
+                    <li><a href="addsanpham.html">Add Product</a></li>
+                    <li class="nav-combine">
+                        <a href="#">Services</a>
+                        <ul class="services">
+                            <li><a href="">Voucher</a></li>
+                            <li><a href="">Guarantee</a></li>
+                            <li><a href="">Flash Sale</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="giohang.html">
+                            <ul>
+                                <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                            </ul>
+                        </a>
+                    </li>
+
+                    <li class="nav-combine">
+                        <a href="#">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        <ul class="account">
+                            <li><a href="loginweb.php">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="thiet-ke-cua-hang-dien-thoai-12(1).jpg" alt="Image 1" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="thiet-ke-cua-hang-dien-thoai-13(2).jpg" alt="Image 2" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="thiet-ke-noi-that-shop-showroom-dien-thoai-aeros-01.jpg" alt="Image 3" class="d-block w-100">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <main>
+        <h2>Welcome to Phone Store!</h2>
+        <p>Discover the latest and hottest phones available in our store.</p>
+    </main>
+
+    <div class="main">
+        <!-- sử dụng container (boostrap để chứa toàn bộ nội dung của phần main) -->
+        <div class="container-fluid">
+            <h2>Featured Products</h2>
+            <div class="row">
+
+                <div class="col-3">
+                    <div class="img">
+                        <a href="">
+                            <img src="iphone.jpg"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="information">
+                        <div class="product_name">
+                            <a href="">Iphone 16 Pro</a>
+                            <div span class="price">28,990,000 ₫</span>
+                                <button class="add-to-cart" data-name="Iphone 16 Pro" data-price="37590000">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="col-3">
+                    <div class="img">
+                        <a href="">
+                            <img src="samsung.webp"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="information">
+                        <div class="product_name">
+                            <a href="">Galaxy S24 Ultra</a>
+                            <div span class="price">44.490.000đ</span>
+                                <button class="add-to-cart" data-name="Galaxy S24 Ultra" data-price="44490000">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <a href="">
+                        <img src="nokia 1110.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <div class="product_name">
+                        <a href="">Nokia 1110i</a>
+                    </div>
+                </div>
+                <div span class="price">999.999.000đ</span>
+                    <button class="add-to-cart" data-name="Nokia" data-price="999999000">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <a href="">
+                        <img src="iphone 12pro.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <div class="product_name">
+                        <a href="">Iphone 12</a>
+                        <div span class="price">4.490.000đ</span>
+                            <button class="add-to-cart" data-name="Iphone 12" data-price="4490000">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-3">
+                <div class="img">
+                    <a href="">
+                        <img src="XOR_X2_Elite_Gold.png"
+                            alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <div class="product_name">
+                        <a href="">XOR </a>
+                        <div span class="price">444.490.000đ</span>
+                            <button class="add-to-cart" data-name="Galaxy S24 Ultra" data-price="444490000">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3">
+                <div class="img">
+                    <a href="">
+                        <img src="oneplus.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <div class="product_name">
+                        <a href="">One plus 9RT</a>
+                        <div span class="price">387.144.124đ</span>
+                            <button class="add-to-cart" data-name="One Plus 9RT" data-price="387144124">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3">
+                <div class="img">
+                    <a href="">
+                        <img src="vertu.webp"
+                            alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <div class="product_name">
+                        <a href="">Vertu Metavertu</a>
+                        <div span class="price">987.000.000đ</span>
+                            <button class="add-to-cart" data-name="Vertu Metavertu" data-price="987000000">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                <div class="col-3">
+                    <div class="img">
+                        <a href="" >
+                            <img src="download.jpg"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="information">
+                        <div class="product_name">
+                            <a href="">Redmi Note 13</a>
+                        </div>
+                        <div span class="price">8.890.000đ</span>
+                            <button class="add-to-cart" data-name="Redmi Note 13" data-price="8890000">
+                                Add to Cart
+                            </button>                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                   
+                <div class="col-3">
+                        <div class="img">
+                            <a href="">
+                                <img src="apple_tablet.png"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="information">
+                            <div class="product_name">
+                                <a href="">Ipad</a>
+                            </div>
+                        </div>
+                        <div span class="price">4.890.000đ</span>
+                            <button class="add-to-cart" data-name="Ipad" data-price="4890000">
+                                Add to Cart
+                            </button>
+                        </div>
+                </div>  
+                <div class="col-3">
+                        <div class="img">
+                            <a href="">
+                                <img src="oppo.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="information">
+                            <div class="product_name">
+                                <a href="">Oppo</a>
+                            </div>
+                        </div>
+                        <div span class="price">4.890.000đ</span>
+                            <button class="add-to-cart" data-name="oppo" data-price="4890000">
+                                Add to Cart
+                            </button>
+                        </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+    <main class="content">
+        <div class="main container-fluid">
+        </div>
+    </main>
+    <script src="cart.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Support Center</h4>
+                <ul>
+                    <li>Call to buy: <a href="tel:0896527875">0896.527.875</a> (8:00-11:30)&(13:30-17h30)</li>
+                    <li>Complaints: <a href="tel:0705484351">0705.484.351</a> (8:00-11:30)&(13:30-17h30)</li>
+                    <li>Warranty: <a href="tel:0912345678">0312.345.678</a> (8:00-11:30)&(13:30-17h30)</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MotMinhTao Joint Stock Company</p>
+        </div>
+    </footer>
+    
+</body>
+</main>
+</html>
